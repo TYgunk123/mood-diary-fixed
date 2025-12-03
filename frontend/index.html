@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <title>心情日記前端</title>
+    <style>
+        body { font-family: Arial; padding: 30px; }
+        #box { max-width: 400px; margin:auto; padding:20px; border:1px solid #ccc; border-radius:10px; }
+        input, button { width:100%; padding:10px; margin-top:10px; }
+        #result { margin-top:20px; font-size:18px; }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h2>心情日記</h2>
+        <input type="text" id="moodInput" placeholder="輸入你的心情，例如：難過" />
+        <button onclick="sendMood()">送出</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
