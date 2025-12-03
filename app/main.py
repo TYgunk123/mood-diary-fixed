@@ -12,7 +12,6 @@ app = FastAPI(
     version="1.0"
 )
 
-# CORS（允許前端）
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -23,21 +22,16 @@ app.add_middleware(
 
 app.include_router(router)
 
-# API 根目錄
 @app.get("/")
 def home():
     return {"message": "Mood Diary API is running!"}
 
-
-# ---- 服務前端 ----
-# 正確：main.py 的上一層才是 frontend 所在位置
+# 正確 frontend 位置：回到專案根目錄
 frontend_dir = Path(__file__).resolve().parents[1] / "frontend"
 
 if frontend_dir.exists():
-    # 註冊靜態檔案
     app.mount("/static", StaticFiles(directory=str(frontend_dir)), name="static")
 
-    # 提供前端頁面
     @app.get("/app", include_in_schema=False)
     def serve_frontend():
         index = frontend_dir / "index.html"
