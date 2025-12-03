@@ -5,7 +5,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
 # 修正：router.py 與 main.py 同層
-from router import router
+from app.router import router
 
 app = FastAPI(
     title="Mood Diary API",
