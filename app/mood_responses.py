@@ -1,7 +1,7 @@
-mood_to_message = {
-    "開心": "保持這份好心情，今天會更順利！",
-    "生氣": "深呼吸一下，你值得更平靜的時刻。",
-    "難過": "辛苦你了，你已經做得很好了。",
-    "焦慮": "慢慢來沒關係，你已經很努力。",
-    "沒動力": "先休息一下，等你有力氣再繼續前進。",
-}
+def generate_mood_reply(mood: str) -> str:
+    mood = mood.lower()
+    if "sad" in mood or "難過" in mood:
+        return "我懂你的感受，你已經做得很好了。"
+    if "happy" in mood or "開心" in mood:
+        return "太好了！保持這份好心情！"
+    return "無論什麼心情，我都在這裡支持你。"
