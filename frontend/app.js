@@ -6,5 +6,5 @@ async function sendMood(){
         body: JSON.stringify({ mood })
     });
     const data = await res.json();
-    document.getElementById("reply").innerText = data.reply;
+    document.getElementById("reply").innerText = data.message;
 }

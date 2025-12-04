@@ -4,4 +4,4 @@ class MoodRequest(BaseModel):
     mood: str
 
 class MoodResponse(BaseModel):
-    reply: str
+    message: str

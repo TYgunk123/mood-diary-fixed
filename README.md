@@ -1,3 +1,1 @@
-# Mood Diary API
-
-使用 FastAPI 製作的心情日記後端服務。
+Mood Diary - Zeabur-ready package\nDo NOT set PORT variable in Zeabur Variables.
